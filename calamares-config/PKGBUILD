@@ -3,8 +3,8 @@
 pkgname=calamares-config
 pkgver=1.0
 pkgrel=1
-pkgdesc="Calamares configuration for Archcraft."
-url="https://github.com/archcraft-os/core-packages"
+pkgdesc="Calamares configuration for ArchLan."
+url="https://github.com/archlan/core"
 arch=('any')
 license=('GPL')
 provides=($pkgname)
@@ -20,7 +20,11 @@ package() {
 	(find calamares -type f -exec install -Dm 644 "{}" "$pkgdir/etc/{}" \;)
 	# make scripts executable
 	chmod 755 "$pkgdir"/etc/calamares/launch.sh
-	chmod 755 "$pkgdir"/etc/calamares/branding/archcraft/test-slides.sh
+	chmod 755 "$pkgdir"/etc/calamares/branding/archlan/test-slides.sh
 }
+
+
+
+
 
 

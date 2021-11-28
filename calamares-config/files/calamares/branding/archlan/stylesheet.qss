@@ -37,35 +37,35 @@ QPushButton#view-button-back:hover,#view-button-next:hover,#view-button-cancel:h
 /*------------------------ Welcome Page Buttons ------------------------*/
 
 #aboutButton { 
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/about.svg);
+	qproperty-icon: url(/etc/calamares/branding/archlan/icons/about.svg);
     font: bold 12px;
     min-width: 2em;
     padding: 8px;
 }
 
 #donateButton { 
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/donate.svg);
+	qproperty-icon: url(/etc/calamares/branding/archlan/icons/donate.svg);
     font: bold 12px;
     min-width: 2em;
     padding: 8px;
 }
 
 #supportButton {
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/fourm.svg);
+	qproperty-icon: url(/etc/calamares/branding/archlan/icons/fourm.svg);
     font: bold 12px;
     min-width: 2em;
     padding: 8px;
 }
 
 #releaseNotesButton {
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/notes.svg);
+	qproperty-icon: url(/etc/calamares/branding/archlan/icons/notes.svg);
     font: bold 12px;
     min-width: 2em;
     padding: 8px;
 }
 
 #knownIssuesButton {
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/issues.svg);
+	qproperty-icon: url(/etc/calamares/branding/archlan/icons/issues.svg);
     font: bold 12px;
     min-width: 2em;
     padding: 8px;
@@ -113,7 +113,7 @@ QComboBox::drop-down {
     border-bottom-right-radius: 3px;
 }
 QComboBox::down-arrow {
-    image: url(/etc/calamares/branding/archcraft/icons/go-down.svg);
+    image: url(/etc/calamares/branding/archlan/icons/go-down.svg);
 }
 
 /*------------------------ Main App ------------------------*/

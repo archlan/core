@@ -6,7 +6,7 @@
 ## Dirs
 DIR="$(pwd)"
 PKGS=(`ls -d */ | cut -f1 -d'/'`)
-PKGDIR="$DIR/packages"
+PKGDIR="$HOME/archlan-core-packages"
 
 ## Script Termination
 exit_on_signal_SIGINT () {
@@ -37,8 +37,6 @@ build_pkgs () {
 
 		if [[ "$pkg" == 'calamares' ]]; then
 			rm -rf src pkg calamares-*
-		elif [[ "$pkg" == 'grub' ]]; then
-			rm -rf src pkg gnulib grub grub-extras unifont-* 
 		elif [[ "$pkg" == 'plymouth' ]]; then
 			rm -rf src pkg *.tar.gz
 		else

@@ -4,9 +4,9 @@
 ## Distribution Branding Settings
 
 ---
-componentName:  archcraft
+componentName:  archlan
 
-## Show "Welcome to the Calamares installer for Archcraft." instead?
+## Show "Welcome to the Calamares installer for archlan." instead?
 welcomeStyleCalamares:   false
 
 ## Should the welcome image be scaled up beyond its natural size?
@@ -33,18 +33,18 @@ navigation: widget
 
 ## Strings
 strings:
-    productName:         Archcraft
-    shortProductName:    Archcraft
-    version:             2021.09
-    shortVersion:        21.09
-    versionedName:       Archcraft
-    shortVersionedName:  Archcraft
-    bootloaderEntryName: Archcraft
-    productUrl:          https://archcraft.io
-    supportUrl:          https://reddit.com/r/archcraft
-    knownIssuesUrl:      https://github.com/archcraft-os/archcraft/issues
-    releaseNotesUrl:     https://github.com/archcraft-os/archcraft/blob/master/changelog.md
-    donateUrl:           https://archcraft.io/donate
+    productName:         ArchLan Linux
+    shortProductName:    ArchLan
+    version:             2021.12
+    shortVersion:        21.12
+    versionedName:       archlan-linux
+    shortVersionedName:  archlan
+    bootloaderEntryName: ArchLan
+    productUrl:          https://archlan.github.io
+    supportUrl:          https://reddit.com/r/archlan
+    knownIssuesUrl:      https://github.com/archlan/iso/issues
+    releaseNotesUrl:     https://archlan.github.io/documentation/news
+    donateUrl:           https://archlan.github.io/donate
 
 ## Images
 # productBanner : On top of welcome text (64x460)
