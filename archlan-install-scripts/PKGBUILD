@@ -1,0 +1,24 @@
+# Maintainer: Aditya Shakya <@adi1090x>
+
+pkgname=archlan-install-scripts
+pkgver=1.0
+pkgrel=1
+pkgdesc='ArchLan Install Scripts'
+url="https://github.com/archlan/core"
+arch=('any')
+license=('GPL3')
+
+source=(
+		'chrooted_post_install.sh'
+		'post_install.sh'
+)
+
+sha512sums=('3ca8f702771ce0cc23e438a895c1187bb6c19ce2aebea07e41bda7f8528f0c666d82fe193bf8ddf7d2bd0695b7482e7b170e8eb08678b2a13eeed5b7fa2cb332'
+            '001e216a84bb8646f414b9846e94ece00ca07ee298bcf7335bbdca587a42041b31f90d8d5aaf17f0de869950a3ffe1122428c1e71584bcb22191dcc3d1a2e0aa')
+
+package() {
+	local bin=${pkgdir}/usr/bin
+	
+	install -Dm755 chrooted_post_install.sh 	${bin}/chrooted_post_install.sh
+	install -Dm755 post_install.sh 				${bin}/post_install.sh
+}

@@ -1,0 +1,4 @@
+############### Archcraft Mirrorlist ###############
+
+## Worldwide
+Server = https://archlan.github.io/archlan-packages/$arch
