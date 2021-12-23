@@ -5,12 +5,6 @@
 
 ## Perform various operations for ArchLan
 
-fix_openbox() {
-	## Set black background for openbox
-	sed -i -e 's#test -z $BG || $BG -solid .*#test -z $BG || $BG -solid "\#000000"#g' /usr/lib/openbox/openbox-autostart
-	rm -rf /usr/share/xsessions/openbox-kde.desktop
-}
-
 fix_pixmaps() {
 	## Remove Arch Linux artworks
 	imgs=('archlinux.png' 'archlinux.svg' 'archlinux-logo.png' 'archlinux-logo.svg')

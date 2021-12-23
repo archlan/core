@@ -16,11 +16,8 @@ source=(
 		'archlan-reboot-required.hook'
 		'archlan-reboot-required'
 		'archlan-hook-nm.hook'
-		'archlan-hook-openbox.hook'
 		'archlan-hook-pixmaps.hook'
-		'archlan-hook-thunar.hook'
 		'archlan-hook-zsh.hook'
-		'archlan-hook-grub.hook'
 		'archlan-hooks-misc'
 )
 
@@ -31,12 +28,9 @@ sha512sums=('fd5cd12a80fff50d87d7b30d1969d7a5d0e961081e3586ccb100bdcfe4f61547646
             '32851fce917606b9422bd2418f7021e626a58daa92dcfcc496157b38b98d90ac68809dc31e2d90a7133bcf87ed7dbec35c9030411327c3517ef9c05eccb56ba7'
             '2fbe7bb452c9d279ce2b7a4d714f6e4fcb21a8dbf1e5f1a45940f49699e6f21a89fcf822c7e157e401064e3d6dbd401a96a10826a8eb3b78814fa565933fd843'
             '38eb8fe4612dc2b8f14982a502b7791cbf6d02bdc12f3551b149817763c71d60cb517ea14efe51cb2349dbcbba0ce50f0345c1393669ea4db8923a113b86fa65'
-            '6f3f071cb14a98f12c4869cf83b1173bab116a1ebbe4048b8b8307320d49df0510eaa94163ac20910e6873ac19536a9df2eda4da239a76b1dbb69070e550cf5c'
             'd1c8631cf6dcc44e76a7cb3611ae656c1706c9c181791d186c7dfa7aa6db380524169170620bc84f3ed5c532e1cf0a35f2c6e0014b8f375d0ac47132f41fb467'
-            '26bf376011d5ed6ccbfc627bfcbf74ee34f8ce354b4cb1b30dab3808bc84ee4681030c30874f38c6731f8ff8bf88f6544c96c9da34cc7949408bfbe9207a51df'
             '1805ac52ba60b1af3d9872865b0eaed46619fc72527fba821d40fe9149fca3e0edc190bf167f47bd391dafa2a40fdcb0957560ca26bf622ec0dd58140abe00f3'
-            'a08f9ea38580f5e1a0a55cca8e3d11c76c2bd3479f0da3a0aea17d79d5f0dc1e565c4849becd4724b3719ea091ac5989230e5f9db2912d096b951f9ef018c71d'
-            '0bb412e46ae9386f7028e72200adce4246494189121aea66d5225b5e7f7965f6262c02530cd7f40d2ef682e19d880576e3ce75b3c6b1b6847f5fe68c34bfa958')
+            '258c88ef6935c24591d47a86e17d7dbdb49ef2ce181c0688fb68e0892ea3fdd9f262fb5fdfa50f1a7bc58be8dc67b65a0b9615b31d767fcb96110a00fbcf260d')
 
 package() {
   local hooks=${pkgdir}/usr/share/libalpm/hooks
@@ -47,11 +41,8 @@ package() {
   install -Dm644 archlan-os-release.hook       	"$hooks"/archlan-os-release.hook
   install -Dm644 archlan-reboot-required.hook  	"$hooks"/archlan-reboot-required.hook
   install -Dm644 archlan-hook-nm.hook  			"$hooks"/archlan-hook-nm.hook
-  install -Dm644 archlan-hook-openbox.hook  		"$hooks"/archlan-hook-openbox.hook
   install -Dm644 archlan-hook-pixmaps.hook  		"$hooks"/archlan-hook-pixmaps.hook
-  install -Dm644 archlan-hook-thunar.hook  		"$hooks"/archlan-hook-thunar.hook
   install -Dm644 archlan-hook-zsh.hook  			"$hooks"/archlan-hook-zsh.hook
-  install -Dm644 archlan-hook-grub.hook  			"$hooks"/archlan-hook-grub.hook
 
   install -Dm755 ${pkgname}-runner         			"$bin"/${pkgname}-runner
   install -Dm755 archlan-reboot-required       	"$bin"/archlan-reboot-required

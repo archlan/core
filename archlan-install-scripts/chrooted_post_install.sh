@@ -34,7 +34,6 @@ _remove_pkgs_if_installed() {
 _manage_systemd_services() {
 	local _enable_services=('NetworkManager.service'
 							'bluetooth.service'
-							'cups.service'
 							'avahi-daemon.service'
 							'systemd-timesyncd.service')
 	local srv
@@ -141,7 +140,6 @@ _remove_unwanted_ucode() {
 # Remove unnecessary packages
 _remove_unwanted_packages() {
     local _packages_to_remove=('archlan-install-scripts'
-							   'archlan-installer'
 							   'archlan-welcome'
 							   'calamares-config'
 							   'calamares'
@@ -203,12 +201,6 @@ _clean_target_system() {
 ## -------- Perform Misc Operations --------------
 
 _perform_various_stuff() {
-
-	# Copy grub theme to boot directory
-	echo "+---------------------->>"
-	echo "[*] Copying grub theme to boot directory..."
-	mkdir -p /boot/grub/themes
-	cp -rf /usr/share/grub/themes/archlan /boot/grub/themes
 
 	# disabling autologin for lightdm (if exist)
 	lightdm_config='/etc/lightdm/lightdm.conf'
