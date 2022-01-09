@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    archlan-hooks-misc                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: Lanhild <archlan@protonmail.com>           +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/01/08 19:06:56 by Lanhild           #+#    #+#              #
+#    Updated: 2022/01/08 19:07:23 by Lanhild          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/bin/bash
 
 ## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
@@ -38,7 +50,6 @@ main()
     local hookname="$1"
 
     case "$hookname" in
-        fix-openbox)  fix_openbox ;;
         fix-pixmaps)  fix_pixmaps ;;
         fix-thunar)   fix_thunar ;;
         fix-nmd)      fix_nmd ;;

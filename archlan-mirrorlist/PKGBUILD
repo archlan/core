@@ -10,7 +10,7 @@ license=('GPL3')
 
 source=($pkgname)
 
-sha512sums=('e9ff3cc901df3190aba5d73251d7b987bd24085eda62cde387bf5e90a1dd417f85ff31106225df79f026ce26120895d0a63c3860e11b390b41fc60a97b13ba5d')
+sha512sums=('9b6e878a92f8827c2aa95d93d04d331331706185ae0f6ac233141442a86723914117086af93e44f506e7356e2362cfc206d8e836a7b558a82de383a27683d2d7')
 
 package() {
 	install -Dm644 ${pkgname}  ${pkgdir}/etc/pacman.d/${pkgname}

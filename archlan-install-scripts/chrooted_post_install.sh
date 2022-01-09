@@ -1,11 +1,15 @@
 #!/bin/bash
-
-## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
-
-## Post installation script for Archcraft (Executes on target system to perform various operations)
-
-## -----------------------------------------------
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    chrooted_post_install.sh                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: Lanhild <archlan@protonmail.com>           +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/01/07 15:20:23 by Lanhild           #+#    #+#              #
+#    Updated: 2022/01/07 15:20:23 by Lanhild          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 # Get new user's username
 new_user=`cat /etc/passwd | grep "/home" | cut -d: -f1 | head -1`
@@ -35,6 +39,7 @@ _manage_systemd_services() {
 	local _enable_services=('NetworkManager.service'
 							'bluetooth.service'
 							'avahi-daemon.service'
+							'lightdm.service'
 							'systemd-timesyncd.service')
 	local srv
 
@@ -148,6 +153,7 @@ _remove_unwanted_packages() {
 							   'ckbcomp'
 							   'boost'
 							   'mkinitcpio-archiso'
+							   'livecd-sounds'
 							   'darkhttpd'
 							   'irssi'
 							   'lftp'
@@ -182,8 +188,6 @@ _clean_target_system() {
         /home/"$new_user"/{.xinitrc,.xsession,.xprofile,.wget-hsts,.screenrc,.ICEauthority}
         /root/{.automated_script.sh,.zlogin}
         /root/{.xinitrc,.xsession,.xprofile}
-		/usr/local/bin/{Installation_guide}
-		/usr/share/applications/xfce4-about.desktop
 		/usr/share/calamares
         /{gpg.conf,gpg-agent.conf,pubring.gpg,secring.gpg}
         /var/lib/NetworkManager/NetworkManager.state
@@ -208,7 +212,7 @@ _perform_various_stuff() {
 		echo "+---------------------->>"
 		echo "[*] Disabling autologin for lightdm..."
 		sed -i -e 's|autologin-user=.*|#autologin-user=username|g' "$lightdm_config"
-		sed -i -e 's|autologin-session=.*|#autologin-session=openbox|g' "$lightdm_config"
+		sed -i -e 's|autologin-session=.*|#autologin-session=i3|g' "$lightdm_config"
 	fi
 
 	# Perform various operations
