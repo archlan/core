@@ -6,7 +6,7 @@
 #    By: Lanhild <archlan@protonmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/08 19:09:16 by Lanhild           #+#    #+#              #
-#    Updated: 2022/01/08 19:13:03 by Lanhild          ###   ########.fr        #
+#    Updated: 2022/01/08 19:57:23 by Lanhild          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ source=(
 )
 
 sha512sums=('0270e8ba5816f5ad0bc7bc730c80ace0c043a858e505ed2c6375d2ca9f8dc6b1d43417d5e02078f2ce6fbbbb0ca1ac355f8cd46025fd2e7d83e5bef13d821416'
-            '23aa3b77b72c7af7cc07c68a35904ecb765648dfa320481352e6644af792b98a7d03bab1a6d530b78d554ed6407d601292dfb812a4750fefd76ca6f06398e1b4'
+            'd92b7a0399d18272b522c6b2217d92217bef1c2b1f4f734667cf143132d28808b014841a710b60e93372ea16eeb7c9034b8f536fdfdc23055e74770ae5fb2b89'
             'f9bc386fab6464d1c97e3de47bb1a9b29ad9f45a416e58f15e1468c7e6c1ac10564ad6b3f4bba636096446d83747ef11eb32ae63254c6065ddc3ec9f2c3834c8'
             '43dc71fd6a3f5e3fea2cc3f274a97c6eca87300aaa989b85af9b03cf08321d1297fc015417c2535eab476d0441ca19e74e5d051ab22174505147494d92859cb0'
             '016891ce2a49b99f88d41bc4c3ae11090cfb3347583c3479b8e310477c04cbd43dfd986961c2cad4310f3370c3d654577f74dc21bc1be66e65b4fc7b0ffc99c1'
@@ -42,7 +42,7 @@ sha512sums=('0270e8ba5816f5ad0bc7bc730c80ace0c043a858e505ed2c6375d2ca9f8dc6b1d43
             'd4167be420c16453bc582685e027dd635a3c8c22150dd0305647138950b184d52e6f6aba649553ec013e8dd0766799542cd58d570fbbd9d971603c3cad3dcdc0'
             '743fe0541ab73cbd0d9f43b1ff1cc517d136272de4625703ff27bd4f18b01c73d43bcca90d26706a13543482f5163da120d9346a1628eae1015e1aa9e6b11138'
             'e5e415234b0a1285e3106d8ce97572d247d87ef2fd18d527d9c5530b82ae86d25d3c36afd48ab1ddc39bbc261e106ee3ae9d2e0818b699719f5f9da574e76194'
-            '4af1a3aaad64f99b98f70bebf923ebe2aa0f2583973638eba08707f4a20a5e8163fbe31e4084752dc7d88c632841f8ea68e68078639cebecefd5d622105ca95c')
+            '1d1a1e1077bdb216e5ee7d25550d2d9e5d835ad9e0931148ed0923e9b625fcad4ce8eced0f1f43428b348939549e351e481b44a8707e4fe4e8660becbc5f4a0b')
 
 package() {
   local hooks=${pkgdir}/usr/share/libalpm/hooks
