@@ -145,6 +145,7 @@ _remove_unwanted_ucode() {
 # Remove unnecessary packages
 _remove_unwanted_packages() {
     local _packages_to_remove=('archlan-install-scripts'
+							   'doxygen'
 							   'archlan-welcome'
 							   'calamares-config'
 							   'calamares'
@@ -221,6 +222,7 @@ _perform_various_stuff() {
     [[ -x `which archlan-hooks-runner` ]] && archlan-hooks-runner
 	runuser -l ${new_user} -c 'xdg-user-dirs-update'
 	runuser -l ${new_user} -c 'xdg-user-dirs-gtk-update'
+	userdel -r liveuser
 
     # Journal stuff
     sed -i 's/volatile/auto/g' /etc/systemd/journald.conf 2>>/tmp/.errlog
