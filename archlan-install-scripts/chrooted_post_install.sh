@@ -227,6 +227,9 @@ _perform_various_stuff() {
     # Journal stuff
     sed -i 's/volatile/auto/g' /etc/systemd/journald.conf 2>>/tmp/.errlog
     sed -i 's/.*pam_wheel\.so/#&/' /etc/pam.d/su	
+
+	# Delete archlan-welcome autostart line in i3 config
+	sed -i '/exec --no-startup-id archlan-welcome/d' $HOME/.config/i3/config
 }
 
 ## -------- ## Execute Script ## -----------------

@@ -2,7 +2,7 @@
 
 pkgname=archlan-install-scripts
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc='ArchLan Install Scripts'
 url="https://github.com/archlan/core"
 arch=('any')
@@ -13,7 +13,7 @@ source=(
 		'post_install.sh'
 )
 
-sha512sums=('38305f1ec8e337907aafec65660a5ffdd652957d7a2d9d4dc85c1116b52937622b8c0b20d9da457fa133236704f361449572de8c615ffba9a92c8072f50933f6'
+sha512sums=('951c3941f066c0725ee1a7c0d56b85020055894098a2905aa30bdbec970b246a305d36b58ee7eab55f75c24e2365c8d46af7ac33b58145686666ab677b34ac92'
             '001e216a84bb8646f414b9846e94ece00ca07ee298bcf7335bbdca587a42041b31f90d8d5aaf17f0de869950a3ffe1122428c1e71584bcb22191dcc3d1a2e0aa')
 
 package() {
