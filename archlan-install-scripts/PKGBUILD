@@ -1,8 +1,18 @@
-# Maintainer: Aditya Shakya <@adi1090x>
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    PKGBUILD                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: Lanhild <archlan@protonmail.com>           +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/01/11 18:11:21 by Lanhild           #+#    #+#              #
+#    Updated: 2022/01/11 18:34:08 by Lanhild          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 pkgname=archlan-install-scripts
 pkgver=1.0
-pkgrel=3
+pkgrel=4
 pkgdesc='ArchLan Install Scripts'
 url="https://github.com/archlan/core"
 arch=('any')
@@ -13,7 +23,7 @@ source=(
 		'post_install.sh'
 )
 
-sha512sums=('951c3941f066c0725ee1a7c0d56b85020055894098a2905aa30bdbec970b246a305d36b58ee7eab55f75c24e2365c8d46af7ac33b58145686666ab677b34ac92'
+sha512sums=('57870a8f7b8aa9472735b877526e1b947c5f2f2b4bd6eb5ce91d2156de418c6f0e8c1fc0f60ebf221810730b9a7b41c50e62de86779d3c36876a71cdedad3a4c'
             '001e216a84bb8646f414b9846e94ece00ca07ee298bcf7335bbdca587a42041b31f90d8d5aaf17f0de869950a3ffe1122428c1e71584bcb22191dcc3d1a2e0aa')
 
 package() {
