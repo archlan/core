@@ -1,12 +1,23 @@
-# Maintainer: Aditya Shakya <adi1090x@gmail.com>
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    PKGBUILD                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: Lanhild <archlan@protonmail.com>           +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/01/25 12:01:07 by Lanhild           #+#    #+#              #
+#    Updated: 2022/01/25 12:16:00 by Lanhild          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 pkgname="archlan-mirrorlist"
 pkgver=1.0
-pkgrel=1
+pkgrel=3
 pkgdesc='ArchLan mirrorlist'
 url="https://github.com/archlan/core"
 arch=('any')
 license=('GPL3')
+groups=(archlan-core)
 
 source=($pkgname)
 

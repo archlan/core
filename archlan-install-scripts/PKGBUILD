@@ -6,17 +6,18 @@
 #    By: Lanhild <archlan@protonmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/11 18:11:21 by Lanhild           #+#    #+#              #
-#    Updated: 2022/01/11 18:34:08 by Lanhild          ###   ########.fr        #
+#    Updated: 2022/01/25 12:00:40 by Lanhild          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 pkgname=archlan-install-scripts
 pkgver=1.0
-pkgrel=4
+pkgrel=5
 pkgdesc='ArchLan Install Scripts'
 url="https://github.com/archlan/core"
 arch=('any')
 license=('GPL3')
+groups=('archlan-core')
 
 source=(
 		'chrooted_post_install.sh'
@@ -24,7 +25,7 @@ source=(
 )
 
 sha512sums=('57870a8f7b8aa9472735b877526e1b947c5f2f2b4bd6eb5ce91d2156de418c6f0e8c1fc0f60ebf221810730b9a7b41c50e62de86779d3c36876a71cdedad3a4c'
-            '001e216a84bb8646f414b9846e94ece00ca07ee298bcf7335bbdca587a42041b31f90d8d5aaf17f0de869950a3ffe1122428c1e71584bcb22191dcc3d1a2e0aa')
+            'b824ae9385b957a3fc01357481a9d906d60ecef9cacb12e7e2a57de3999cff5be33ebc41f847804a5096f8788a927417678294e06a4f828118a8d0c9268f7fdc')
 
 package() {
 	local bin=${pkgdir}/usr/bin

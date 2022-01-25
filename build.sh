@@ -6,7 +6,7 @@
 ## Dirs
 DIR="$(pwd)"
 PKGS=(`ls -d */ | cut -f1 -d'/'`)
-PKGDIR="$HOME/archlan-core-packages"
+PKGDIR="$DIR/packages"
 
 ## Script Termination
 exit_on_signal_SIGINT () {
@@ -33,15 +33,8 @@ build_pkgs () {
 	echo -e "\nBuilding Packages - \n"
 	for pkg in "${PKGS[@]}"; do
 		echo -e "Building ${pkg}..."
-		cd ${pkg} && updpkgsums && makepkg -s && mv *.pkg.tar.zst "$PKGDIR"
-
-		if [[ "$pkg" == 'calamares' ]]; then
-			rm -rf src pkg calamares-*
-		elif [[ "$pkg" == 'plymouth' ]]; then
-			rm -rf src pkg *.tar.gz
-		else
-			rm -rf src pkg
-		fi
+		cd ${pkg} && makepkg -s
+		mv *.pkg.tar.zst "$PKGDIR" && rm -rf src pkg
 
 		# Verify
 		while true; do
@@ -56,7 +49,7 @@ build_pkgs () {
 		done
 		cd "$DIR"
 	done
-
+	
 	RDIR='../packages/x86_64'
 	if [[ -d "$RDIR" ]]; then
 		mv -f "$PKGDIR"/*.pkg.tar.zst "$RDIR" && rm -r "$PKGDIR"

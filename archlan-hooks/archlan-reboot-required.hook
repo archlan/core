@@ -6,17 +6,17 @@
 #    By: Lanhild <archlan@protonmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/08 19:08:50 by Lanhild           #+#    #+#              #
-#    Updated: 2022/01/08 19:08:50 by Lanhild          ###   ########.fr        #
+#    Updated: 2022/01/25 11:09:31 by Lanhild          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-## Copyright (C) 2020-2021 Aditya Shakya <adi1090x@gmail.com>
 ## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 
 [Trigger]
 Operation = Upgrade
 Type = Package
 Target = amd-ucode
+Target = archlan-hooks
 Target = intel-ucode
 Target = btrfs-progs
 Target = cryptsetup
