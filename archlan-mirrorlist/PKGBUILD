@@ -6,23 +6,26 @@
 #    By: Lanhild <archlan@protonmail.com>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 12:01:07 by Lanhild           #+#    #+#              #
-#    Updated: 2022/01/25 12:16:00 by Lanhild          ###   ########.fr        #
+#    Updated: 2022/02/12 23:02:48 by Lanhild          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 pkgname="archlan-mirrorlist"
-pkgver=1.0
-pkgrel=3
+pkgver=1.1
+pkgrel=1
 pkgdesc='ArchLan mirrorlist'
 url="https://github.com/archlan/core"
 arch=('any')
 license=('GPL3')
-groups=(archlan-core)
+groups=('archlan-core' 'archlan-de')
 
-source=($pkgname)
+source=($pkgname
+		'pacman.conf')
 
-sha512sums=('9b6e878a92f8827c2aa95d93d04d331331706185ae0f6ac233141442a86723914117086af93e44f506e7356e2362cfc206d8e836a7b558a82de383a27683d2d7')
+sha512sums=('9b6e878a92f8827c2aa95d93d04d331331706185ae0f6ac233141442a86723914117086af93e44f506e7356e2362cfc206d8e836a7b558a82de383a27683d2d7'
+			'05145ec69db7e91132e8d57649ea4fb9f425c81b3d40319b6c12be647cf6e62665f391199709c12f6a5269ddf54bc22dcff99329356301128c7779d990c83607')
 
 package() {
 	install -Dm644 ${pkgname}  ${pkgdir}/etc/pacman.d/${pkgname}
+	install -Dm644 pacman.conf  ${pkgdir}/etc/pacman.d/pacman.conf
 }
